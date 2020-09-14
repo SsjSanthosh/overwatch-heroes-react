@@ -1,0 +1,41 @@
+@import "~antd/dist/antd.css";
+*,
+p,
+div {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: overwatch;
+  src: url(https://us.battle.net/forums/static/fonts/f014015d/f014015d.woff);
+}
+
+@font-face {
+  font-family: overwatch-italic;
+  src: url(https://us.battle.net/forums/static/fonts/bignoodletoo/bignoodletoo.woff);
+}
+
+* {
+  cursor: url(https://cdn.discordapp.com/attachments/303406782104207362/315839175406649345/Overwatch.cur),
+    auto;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+body {
+  font-family: overwatch-italic, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: url("https://www.nintendo.com.au/modules/prodcatalogue/templates/custom/overwatch/img/crystal_candy_bg_top.jpg");
+  background-size: cover;
+  background-repeat: repeat-y;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}

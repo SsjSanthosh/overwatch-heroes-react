@@ -1,0 +1,14 @@
+.hero-selection-div {
+  height: 600px;
+  margin: 0 auto;
+
+  background-size: cover;
+  .hero-selection-title {
+    font-size: 36px;
+  }
+  .hero-selection-roster {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
