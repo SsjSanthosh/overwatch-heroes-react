@@ -43,3 +43,17 @@ export const ULTIMATE_FIELDS = {
   healing: "Healing",
   description: "Description",
 };
+
+export const ABILITY_FIELDS = {
+  name: "Name",
+  cooldown: "Cooldown",
+  damage: "Damage",
+  description: "Description",
+  type: "Ability type",
+  healing: "Healing",
+  casting_time: "Cast time",
+  movement_speed: "Movement speed",
+  area_of_effect: "Area of effect",
+  duration: "Duration",
+  health: "Health",
+};

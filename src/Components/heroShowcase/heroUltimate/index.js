@@ -1,3 +1,4 @@
+import { Divider } from "antd";
 import React from "react";
 import { ULTIMATE_FIELDS } from "../../constants";
 import "./style.scss";
