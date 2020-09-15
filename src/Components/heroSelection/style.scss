@@ -1,14 +1,64 @@
 .hero-selection-div {
   height: 600px;
-  margin: 0 auto;
+  justify-content: center;
 
   background-size: cover;
   .hero-selection-title {
     font-size: 36px;
   }
   .hero-selection-roster {
+    margin: 0 auto;
+    margin-top: 24px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+  }
+  .role-select-div {
+    width: 650px;
+    margin-bottom: 24px;
+    display: flex;
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+    }
+    margin: 0 auto;
+    button {
+      outline: none;
+      width: 150px;
+    }
+    .hero-role-btn {
+      @media screen and (max-width: 768px) {
+        width: 150px;
+        margin-bottom: 8px;
+      }
+      display: flex;
+      font-weight: 400;
+      justify-content: center;
+      align-items: center;
+      border-radius: 4px;
+      font-size: 16px;
+      height: 40px;
+      background-color: rgba(102, 118, 169, 0.2);
+      border: 0;
+      padding: 8px;
+      margin: 0 2px;
+      color: rgb(102, 118, 169);
+      align-items: center;
+      &:hover {
+        cursor: pointer;
+        background: #fff;
+        transform: scale(1.1);
+        transition: scale 0.2s ease-in;
+      }
+    }
+    .hero-role-icon {
+      margin-right: 8px;
+      > img {
+        width: 20px;
+        height: 20px;
+        filter: invert(43%) sepia(13%) saturate(1417%) hue-rotate(188deg)
+          brightness(97%) contrast(90%);
+      }
+    }
   }
 }
