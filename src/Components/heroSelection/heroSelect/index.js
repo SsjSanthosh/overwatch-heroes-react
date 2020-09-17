@@ -15,9 +15,9 @@ function HeroSelect({ hero, selectedHero, getHero }) {
           src={`${window.staticPath}${hero.preview_image}`}
           alt="hero-preview"
         />
-        <div className="hero-select-name">
-          <p>{hero.name}</p>
-        </div>
+      </div>
+      <div className="hero-select-name">
+        <p>{hero.name}</p>
       </div>
     </div>
   );

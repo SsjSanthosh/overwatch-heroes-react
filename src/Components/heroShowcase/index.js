@@ -2,44 +2,56 @@ import { Tabs } from "antd";
 import React from "react";
 import { If, Else, Then } from "react-if";
 import { connect } from "react-redux";
-import EmptyBackground from "../../img/empty-image.png";
-import HeroAbilities from "./heroAbilities";
-import HeroProfile from "./heroProfile";
-import HeroUltimate from "./heroUltimate";
-import HeroWeapons from "./heroWeapons";
+import { getRenderedHeroObjects } from "../utils";
+import {
+  PROFILE_FIELDS,
+  WEAPON_FIELDS,
+  ABILITY_FIELDS,
+  ULTIMATE_FIELDS,
+} from "../constants";
+import EmptyShowcase from "./emptyShowcase";
 import "./style.scss";
 function HeroShowcase({ hero }) {
   const { TabPane } = Tabs;
+  console.log(!Object.keys(hero).length, "hero");
   return (
-    <div>
+    <div className="hero-showcase-container">
       <If condition={!Object.keys(hero).length}>
         <Then>
+          {console.log("inside if ")}
           <>
             {" "}
-            <img src={EmptyBackground} alt="overwatch" />
-            <p className="empty-showcase-text">
-              Select a hero to see their stats and profile!
-            </p>
+            <div className="empty-showcase-div">
+              <p className="empty-showcase-text">
+                Select a hero to see their stats and profile!
+              </p>
+              <EmptyShowcase />
+            </div>
           </>
         </Then>
         <Else>
-          <div className="hero-showcase-container">
-            <div className="hero-render-div">
-              <img src={hero.image} alt={hero.name} />
-            </div>
+          <div>
             <div className="hero-detail-div">
               <Tabs defaultActiveKey="1">
                 <TabPane tab="Profile" key="1">
-                  <HeroProfile />
+                  {getRenderedHeroObjects(hero, PROFILE_FIELDS, "profile")}
                 </TabPane>
                 <TabPane tab="Weapons" key="2">
-                  <HeroWeapons weapons={hero.weapon} />
+                  {getRenderedHeroObjects(hero.weapon, WEAPON_FIELDS, "weapon")}
                 </TabPane>
                 <TabPane tab="Abilities" key="3">
-                  <HeroAbilities abilities={hero.abilities} />
+                  {getRenderedHeroObjects(
+                    hero.abilities,
+                    ABILITY_FIELDS,
+                    "ability"
+                  )}
                 </TabPane>
                 <TabPane tab="Ultimate" key="4">
-                  <HeroUltimate ultimate={hero.ultimate} />
+                  {getRenderedHeroObjects(
+                    hero.ultimate,
+                    ULTIMATE_FIELDS,
+                    "ultimate"
+                  )}
                 </TabPane>
               </Tabs>
             </div>

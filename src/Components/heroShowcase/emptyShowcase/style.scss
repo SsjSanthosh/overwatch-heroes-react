@@ -1,12 +1,11 @@
 .overwatch-loader {
-  width: 25%;
+  width: 45%;
   position: relative;
   margin: 0px auto;
 }
 .overwatch-logo {
-  filter: drop-shadow(0 0 120px rgba(255, 255, 255, 0.15))
-    drop-shadow(0 0 16px rgba(255, 255, 255, 0.05));
-  opacity: 0.8;
+  // filter: grayscale(1);
+  opacity: 1;
 }
 .circularCW,
 .circularCCW {

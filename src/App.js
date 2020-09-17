@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import logo from "./logo.svg";
-import "./App.css";
+import "./App.scss";
 import HeroShowcase from "./Components/heroShowcase";
 import HeroSelection from "./Components/heroSelection";
 import { Provider } from "react-redux";

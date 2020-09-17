@@ -5,6 +5,13 @@ import { PROFILE_FIELDS } from "../../constants";
 import "./style.scss";
 function HeroProfile({ hero }) {
   const renderProfile = Object.keys(hero).map((prop) => {
+    if (prop === "image") {
+      return (
+        <div className="hero-profile-img">
+          <img src={hero[prop]} alt={hero.name} />
+        </div>
+      );
+    }
     if (PROFILE_FIELDS[prop] && hero[prop]) {
       return (
         <p className="hero-prop">
