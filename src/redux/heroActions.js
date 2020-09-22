@@ -1,8 +1,8 @@
 import axios from "axios";
+import { BACKEND_API_PATH } from "../Components/constants";
 import { GET_HEROES_API_PATH } from "../Components/endpoints";
-console.log("url", process.env.REACT_APP_BASE_API_URL);
-console.log("node", process.env.NODE_ENV);
-axios.defaults.baseURL = "https://overwatch-heroes-api.herokuapp.com/";
+
+axios.defaults.baseURL = BACKEND_API_PATH;
 export const getHero = (id) => async (dispatch) => {
   try {
     const res = await axios.get("api/v1/heroes/list/" + id + "/");

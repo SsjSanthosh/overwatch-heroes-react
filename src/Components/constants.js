@@ -57,3 +57,5 @@ export const ABILITY_FIELDS = {
   duration: "Duration",
   health: "Health",
 };
+
+export const BACKEND_API_PATH = "https://overwatch-heroes-api.herokuapp.com/";

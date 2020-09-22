@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { getHero } from "../../../redux/heroActions";
+import { BACKEND_API_PATH } from "../../constants";
 import "./style.scss";
 
 function HeroSelect({ hero, selectedHero, getHero }) {
@@ -12,7 +13,7 @@ function HeroSelect({ hero, selectedHero, getHero }) {
     <div className="hero-select" onClick={handleHeroSelect}>
       <div className="hero-select-img-div">
         <img
-          src={`${window.staticPath}${hero.preview_image}`}
+          src={`${BACKEND_API_PATH}${hero.preview_image}`}
           alt="hero-preview"
         />
       </div>

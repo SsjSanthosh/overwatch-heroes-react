@@ -1,9 +1,9 @@
 import { Carousel } from "antd";
 import React from "react";
+import { BACKEND_API_PATH } from "../Components/constants";
 const renderHeroObjects = (data, fields, type) => {
   return (
     <div className={`hero-${type}`}>
-      {console.log(data)}
       {Object.keys(data).map((prop) => {
         if (prop === "name") {
           return (
@@ -24,14 +24,13 @@ const renderHeroObjects = (data, fields, type) => {
         if (prop === "image") {
           return (
             <div className={`hero-${type}-img`}>
-              <img src={data[prop]} alt={data.name} />
+              <img src={`${BACKEND_API_PATH}${data[prop]}`} alt={data.name} />
             </div>
           );
         } else if (prop === "favourite_quote") {
           return <p className="hero-quote">{data[prop]}</p>;
         }
         if (fields[prop] && data[prop]) {
-          console.log(prop);
           return (
             <>
               <p className="hero-prop">
