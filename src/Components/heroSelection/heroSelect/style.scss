@@ -1,9 +1,9 @@
 .hero-select {
-  width: 130px;
-  height: 220px;
+  width: 120px;
+  height: 200px;
   position: relative;
-  margin-right: 8px;
-  margin-bottom: 25px;
+  margin: 10px 0px;
+  margin-right: 6px;
   &:hover {
     transform: scale(1.1);
     cursor: pointer;
@@ -17,7 +17,7 @@
     }
     .hero-select-name {
       background-color: #fff;
-      color: orange;
+      color: RGB(46, 57, 86);
     }
   }
   .hero-select-img-div {
@@ -35,8 +35,8 @@
     margin: 0;
     padding: 4px 0;
     position: relative;
-    bottom: 25%;
-    background-color: rgba(56, 65, 87, 0.8);
+    bottom: 30%;
+    background-color: RGBA(46, 57, 86, 0.8);
     color: #fff;
     font-size: 22px;
   }

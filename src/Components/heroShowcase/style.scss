@@ -23,11 +23,10 @@
       color: black;
     }
   }
-  margin-top: 32px;
+  margin-top: 16px;
   display: flex;
   justify-content: space-evenly;
   position: relative;
-  height: 80vh;
   .hero-render-div {
     width: 600px;
     height: 80vh;
@@ -37,11 +36,20 @@
   .hero-detail-div {
     justify-self: center;
     width: 450px;
+    margin: 0 auto;
     min-height: 600px;
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 4px;
     padding: 24px 12px;
+    padding-top: 0;
     align-items: center;
+    @media only screen and (max-width: 1200px) {
+      margin-bottom: 24px;
+    }
+    .ant-tabs-tab {
+      margin: 0;
+      padding: 8px 16px;
+    }
     .ant-tabs-tab .ant-tabs-tab-btn {
       font-size: 24px;
     }
@@ -52,6 +60,14 @@
     .ant-tabs-ink-bar {
       background-color: orange;
     }
+    .ant-tabs-nav-wrap {
+      justify-content: center;
+    }
+    .ant-tabs-nav-list {
+      display: flex;
+      justify-content: space-between;
+      flex: 0.8;
+    }
   }
   .hero-profile-img {
     max-width: 350px;
@@ -61,6 +77,38 @@
       max-width: 100%;
       max-height: 100%;
     }
+  }
+  .hero-quote {
+    font-size: 24px;
+    color: #6676a9;
+  }
+  .hero-ability-name,
+  .hero-profile-name,
+  .hero-weapon-name,
+  .hero-ultimate-name {
+    font-size: 26px;
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    justify-content: space-evenly;
+    > p {
+      flex: 1;
+    }
+    .external-link {
+      font-family: sans-serif;
+      font-size: 12px;
+      flex: 0.2;
+    }
+  }
+  .external-links {
+    display: flex;
+    font-family: sans-serif;
+    flex-direction: column;
+    font-size: 14px;
+  }
+  .hero-profile-name {
+    margin-top: -12px;
   }
   .hero-prop {
     display: flex;

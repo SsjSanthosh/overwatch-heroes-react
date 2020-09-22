@@ -5,7 +5,11 @@
 }
 .overwatch-logo {
   // filter: grayscale(1);
-  opacity: 1;
+  @media only screen and (max-width: 1200px) {
+    filter: invert(64%) sepia(99%) saturate(3161%) hue-rotate(343deg)
+      brightness(96%) contrast(96%);
+    opacity: 0.5;
+  }
 }
 .circularCW,
 .circularCCW {

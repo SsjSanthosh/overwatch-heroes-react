@@ -1,17 +1,34 @@
 import { Carousel } from "antd";
 import React from "react";
 const renderHeroObjects = (data, fields, type) => {
-  console.log(data, "called");
   return (
     <div className={`hero-${type}`}>
+      {console.log(data)}
       {Object.keys(data).map((prop) => {
+        if (prop === "name") {
+          return (
+            <div className={`hero-${type}-name`}>
+              <p>{data[prop]}</p>
+              <a
+                href={`https://overwatch.gamepedia.com/${data.name}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="external-link"
+              >
+                Wiki Link
+              </a>
+              <span className="external-links"></span>
+            </div>
+          );
+        }
         if (prop === "image") {
-          console.log("image");
           return (
             <div className={`hero-${type}-img`}>
               <img src={data[prop]} alt={data.name} />
             </div>
           );
+        } else if (prop === "favourite_quote") {
+          return <p className="hero-quote">{data[prop]}</p>;
         }
         if (fields[prop] && data[prop]) {
           console.log(prop);

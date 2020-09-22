@@ -1,12 +1,14 @@
 .hero-selection-div {
-  @media only screen and (max-width: 1200px) {
-    margin-top: 64px;
-  }
   justify-content: center;
   flex: 1;
   background-size: cover;
   .hero-selection-title {
     font-size: 36px;
+  }
+  .hero-error-message {
+    font-size: 28px;
+    color: crimson;
+    margin-top: 20%;
   }
   .hero-selection-roster {
     margin: 0 auto;
@@ -18,8 +20,6 @@
   }
   .role-select-div {
     margin: 0 auto;
-    margin-bottom: 24px;
-
     display: flex;
     @media screen and (max-width: 768px) {
       > button {

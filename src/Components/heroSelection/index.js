@@ -1,6 +1,6 @@
 import { Button, Card } from "antd";
 import React, { useEffect } from "react";
-import { If } from "react-if";
+import { Else, If, Then } from "react-if";
 import { connect } from "react-redux";
 import { getHero, getAllHeroes } from "../../redux/heroActions";
 import { HERO_ROLES } from "../constants";
@@ -8,10 +8,11 @@ import HeroSelect from "./heroSelect";
 
 import "./style.scss";
 
-function HeroSelection({ heroes, getAllHeroes }) {
+function HeroSelection({ heroes, getAllHeroes, errorMessage }) {
   useEffect(() => {
     getAllHeroes();
   }, [getAllHeroes]);
+  console.log(errorMessage, "error");
   return (
     <div className="hero-selection-div">
       <p className="hero-selection-title"> Choose your hero</p>
@@ -30,17 +31,24 @@ function HeroSelection({ heroes, getAllHeroes }) {
           );
         })}
       </div>
-      <div className="hero-selection-roster">
-        {heroes.map((hero) => (
-          <HeroSelect hero={hero} id={hero.id} />
-        ))}
-      </div>
+      <If condition={errorMessage.length}>
+        <Then>
+          <p className="hero-error-message">{errorMessage}</p>
+        </Then>
+        <Else>
+          <div className="hero-selection-roster">
+            {heroes.map((hero) => (
+              <HeroSelect hero={hero} id={hero.id} />
+            ))}
+          </div>
+        </Else>
+      </If>
     </div>
   );
 }
 
 const mapStateToProps = (state) => {
-  return { heroes: state.hero.heroes };
+  return { heroes: state.hero.heroes, errorMessage: state.hero.errorMessage };
 };
 
 export default connect(mapStateToProps, { getHero, getAllHeroes })(

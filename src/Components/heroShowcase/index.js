@@ -1,5 +1,5 @@
 import { Tabs } from "antd";
-import React from "react";
+import React, { useEffect } from "react";
 import { If, Else, Then } from "react-if";
 import { connect } from "react-redux";
 import { getRenderedHeroObjects } from "../utils";
@@ -11,23 +11,18 @@ import {
 } from "../constants";
 import EmptyShowcase from "./emptyShowcase";
 import "./style.scss";
-function HeroShowcase({ hero }) {
+function HeroShowcase({ hero, errorMessage }) {
   const { TabPane } = Tabs;
-  console.log(!Object.keys(hero).length, "hero");
   return (
     <div className="hero-showcase-container">
       <If condition={!Object.keys(hero).length}>
         <Then>
-          {console.log("inside if ")}
-          <>
-            {" "}
-            <div className="empty-showcase-div">
-              <p className="empty-showcase-text">
-                Select a hero to see their stats and profile!
-              </p>
-              <EmptyShowcase />
-            </div>
-          </>
+          <div className="empty-showcase-div">
+            <p className="empty-showcase-text">
+              Select a hero to see their stats and profile!
+            </p>
+            <EmptyShowcase />
+          </div>
         </Then>
         <Else>
           <div>
@@ -63,6 +58,6 @@ function HeroShowcase({ hero }) {
 }
 
 const mapStateToProps = (state) => {
-  return { hero: state.hero.hero };
+  return { hero: state.hero.hero, errorMessage: state.hero.errorMessage };
 };
 export default connect(mapStateToProps)(HeroShowcase);
