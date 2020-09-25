@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/overwatch-heroes-react/static/css/main.c52d75a4.chunk.css",
-    "main.js": "/overwatch-heroes-react/static/js/main.03d942be.chunk.js",
-    "main.js.map": "/overwatch-heroes-react/static/js/main.03d942be.chunk.js.map",
-    "runtime-main.js": "/overwatch-heroes-react/static/js/runtime-main.86a9215b.js",
-    "runtime-main.js.map": "/overwatch-heroes-react/static/js/runtime-main.86a9215b.js.map",
-    "static/css/2.16d76422.chunk.css": "/overwatch-heroes-react/static/css/2.16d76422.chunk.css",
-    "static/js/2.6ea72570.chunk.js": "/overwatch-heroes-react/static/js/2.6ea72570.chunk.js",
-    "static/js/2.6ea72570.chunk.js.map": "/overwatch-heroes-react/static/js/2.6ea72570.chunk.js.map",
-    "index.html": "/overwatch-heroes-react/index.html",
-    "precache-manifest.7ac82e0d2995409edece7e314fce3697.js": "/overwatch-heroes-react/precache-manifest.7ac82e0d2995409edece7e314fce3697.js",
-    "service-worker.js": "/overwatch-heroes-react/service-worker.js",
-    "static/css/2.16d76422.chunk.css.map": "/overwatch-heroes-react/static/css/2.16d76422.chunk.css.map",
-    "static/css/main.c52d75a4.chunk.css.map": "/overwatch-heroes-react/static/css/main.c52d75a4.chunk.css.map",
-    "static/js/2.6ea72570.chunk.js.LICENSE.txt": "/overwatch-heroes-react/static/js/2.6ea72570.chunk.js.LICENSE.txt",
-    "static/media/index.scss": "/overwatch-heroes-react/static/media/hero-background.76dd2bbe.jpg",
-    "static/media/logo.svg": "/overwatch-heroes-react/static/media/logo.ee7cd8ed.svg"
+    "main.css": "/static/css/main.d24fe3f9.chunk.css",
+    "main.js": "/static/js/main.84fab474.chunk.js",
+    "main.js.map": "/static/js/main.84fab474.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.c8a21426.js",
+    "runtime-main.js.map": "/static/js/runtime-main.c8a21426.js.map",
+    "static/css/2.16d76422.chunk.css": "/static/css/2.16d76422.chunk.css",
+    "static/js/2.5a3c9b11.chunk.js": "/static/js/2.5a3c9b11.chunk.js",
+    "static/js/2.5a3c9b11.chunk.js.map": "/static/js/2.5a3c9b11.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.7d3c474248787e7ff97bb16424bda97e.js": "/precache-manifest.7d3c474248787e7ff97bb16424bda97e.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.16d76422.chunk.css.map": "/static/css/2.16d76422.chunk.css.map",
+    "static/css/main.d24fe3f9.chunk.css.map": "/static/css/main.d24fe3f9.chunk.css.map",
+    "static/js/2.5a3c9b11.chunk.js.LICENSE.txt": "/static/js/2.5a3c9b11.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "/static/media/hero-background.76dd2bbe.jpg",
+    "static/media/logo.svg": "/static/media/logo.ee7cd8ed.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.86a9215b.js",
+    "static/js/runtime-main.c8a21426.js",
     "static/css/2.16d76422.chunk.css",
-    "static/js/2.6ea72570.chunk.js",
-    "static/css/main.c52d75a4.chunk.css",
-    "static/js/main.03d942be.chunk.js"
+    "static/js/2.5a3c9b11.chunk.js",
+    "static/css/main.d24fe3f9.chunk.css",
+    "static/js/main.84fab474.chunk.js"
   ]
 }
