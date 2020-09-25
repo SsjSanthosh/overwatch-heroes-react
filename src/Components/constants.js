@@ -58,4 +58,4 @@ export const ABILITY_FIELDS = {
   health: "Health",
 };
 
-export const BACKEND_API_PATH = "https://overwatch-heroes-api.herokuapp.com/";
+

@@ -1,10 +1,10 @@
 import React from "react";
 import { connect } from "react-redux";
 import { getHero } from "../../../redux/heroActions";
-import { BACKEND_API_PATH } from "../../constants";
+import { BACKEND_API_PATH } from "../../endpoints";
 import "./style.scss";
 
-function HeroSelect({ hero, selectedHero, getHero }) {
+function HeroSelect({ hero, getHero }) {
   function handleHeroSelect(e) {
     e.stopPropagation();
     getHero(hero.id);

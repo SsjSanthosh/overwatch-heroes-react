@@ -1,6 +1,5 @@
 import axios from "axios";
-import { BACKEND_API_PATH } from "../Components/constants";
-import { GET_HEROES_API_PATH } from "../Components/endpoints";
+import { GET_HEROES_API_PATH, BACKEND_API_PATH } from "../Components/endpoints";
 
 axios.defaults.baseURL = BACKEND_API_PATH;
 export const getHero = (id) => async (dispatch) => {

@@ -1,6 +1,6 @@
 import { Carousel } from "antd";
 import React from "react";
-import { BACKEND_API_PATH } from "../Components/constants";
+import { BACKEND_API_PATH } from "../Components/endpoints";
 const renderHeroObjects = (data, fields, type) => {
   return (
     <div className={`hero-${type}`}>

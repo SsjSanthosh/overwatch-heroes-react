@@ -12,7 +12,6 @@ function HeroSelection({ heroes, getAllHeroes, errorMessage }) {
   useEffect(() => {
     getAllHeroes();
   }, [getAllHeroes]);
-  console.log(errorMessage, "error");
   return (
     <div className="hero-selection-div">
       <p className="hero-selection-title"> Choose your hero</p>
