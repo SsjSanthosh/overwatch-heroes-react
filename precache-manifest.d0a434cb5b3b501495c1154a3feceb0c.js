@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "984d169064b9b8696c8fa13905d39cc4",
+    "revision": "f86ae9f9a8097b2d87cb8d00067bca8c",
     "url": "/overwatch-heroes-react/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/overwatch-heroes-react/static/css/2.16d76422.chunk.css"
   },
   {
-    "revision": "14dc177b68fb6fd2a511",
+    "revision": "f162537e005ee6b01009",
     "url": "/overwatch-heroes-react/static/css/main.6dcf49ab.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/overwatch-heroes-react/static/js/2.3f258283.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "14dc177b68fb6fd2a511",
-    "url": "/overwatch-heroes-react/static/js/main.1b560839.chunk.js"
+    "revision": "f162537e005ee6b01009",
+    "url": "/overwatch-heroes-react/static/js/main.6e1ad045.chunk.js"
   },
   {
     "revision": "e7e3f065cad25796e675",
