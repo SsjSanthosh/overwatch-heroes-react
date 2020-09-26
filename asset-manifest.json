@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/overwatch-heroes-react/static/css/main.3204c97a.chunk.css",
-    "main.js": "/overwatch-heroes-react/static/js/main.84fab474.chunk.js",
-    "main.js.map": "/overwatch-heroes-react/static/js/main.84fab474.chunk.js.map",
+    "main.css": "/overwatch-heroes-react/static/css/main.b56c4dce.chunk.css",
+    "main.js": "/overwatch-heroes-react/static/js/main.91dd8e2c.chunk.js",
+    "main.js.map": "/overwatch-heroes-react/static/js/main.91dd8e2c.chunk.js.map",
     "runtime-main.js": "/overwatch-heroes-react/static/js/runtime-main.86a9215b.js",
     "runtime-main.js.map": "/overwatch-heroes-react/static/js/runtime-main.86a9215b.js.map",
     "static/css/2.16d76422.chunk.css": "/overwatch-heroes-react/static/css/2.16d76422.chunk.css",
-    "static/js/2.5a3c9b11.chunk.js": "/overwatch-heroes-react/static/js/2.5a3c9b11.chunk.js",
-    "static/js/2.5a3c9b11.chunk.js.map": "/overwatch-heroes-react/static/js/2.5a3c9b11.chunk.js.map",
+    "static/js/2.3f258283.chunk.js": "/overwatch-heroes-react/static/js/2.3f258283.chunk.js",
+    "static/js/2.3f258283.chunk.js.map": "/overwatch-heroes-react/static/js/2.3f258283.chunk.js.map",
     "index.html": "/overwatch-heroes-react/index.html",
-    "precache-manifest.405a448f8b7aa8e6a2c3514c52811270.js": "/overwatch-heroes-react/precache-manifest.405a448f8b7aa8e6a2c3514c52811270.js",
+    "precache-manifest.a7d8e08c273dc9ce9b7ca32d50d60dc5.js": "/overwatch-heroes-react/precache-manifest.a7d8e08c273dc9ce9b7ca32d50d60dc5.js",
     "service-worker.js": "/overwatch-heroes-react/service-worker.js",
     "static/css/2.16d76422.chunk.css.map": "/overwatch-heroes-react/static/css/2.16d76422.chunk.css.map",
-    "static/css/main.3204c97a.chunk.css.map": "/overwatch-heroes-react/static/css/main.3204c97a.chunk.css.map",
-    "static/js/2.5a3c9b11.chunk.js.LICENSE.txt": "/overwatch-heroes-react/static/js/2.5a3c9b11.chunk.js.LICENSE.txt",
+    "static/css/main.b56c4dce.chunk.css.map": "/overwatch-heroes-react/static/css/main.b56c4dce.chunk.css.map",
+    "static/js/2.3f258283.chunk.js.LICENSE.txt": "/overwatch-heroes-react/static/js/2.3f258283.chunk.js.LICENSE.txt",
     "static/media/index.scss": "/overwatch-heroes-react/static/media/hero-background.76dd2bbe.jpg",
     "static/media/logo.svg": "/overwatch-heroes-react/static/media/logo.ee7cd8ed.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.86a9215b.js",
     "static/css/2.16d76422.chunk.css",
-    "static/js/2.5a3c9b11.chunk.js",
-    "static/css/main.3204c97a.chunk.css",
-    "static/js/main.84fab474.chunk.js"
+    "static/js/2.3f258283.chunk.js",
+    "static/css/main.b56c4dce.chunk.css",
+    "static/js/main.91dd8e2c.chunk.js"
   ]
 }

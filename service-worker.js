@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/overwatch-heroes-react/precache-manifest.405a448f8b7aa8e6a2c3514c52811270.js"
+  "/overwatch-heroes-react/precache-manifest.a7d8e08c273dc9ce9b7ca32d50d60dc5.js"
 );
 
 self.addEventListener('message', (event) => {
