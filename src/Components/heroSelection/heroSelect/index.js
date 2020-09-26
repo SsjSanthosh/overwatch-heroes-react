@@ -9,6 +9,7 @@ function HeroSelect({ hero, getHero, selectedHero }) {
     e.stopPropagation();
     if (selectedHero && hero.id !== selectedHero.id) {
       getHero(hero.id);
+      document.body.scrollTop = document.documentElement.scrollTop = 0;
     }
   }
   return (
