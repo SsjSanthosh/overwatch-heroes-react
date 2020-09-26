@@ -14,7 +14,7 @@ const heroReducer = (state = initialState, action) => {
       return { ...state, hero: payload, fetching: false, errorMessage: "" };
     case "SET_HEROES_PREVIEW":
       return { ...state, heroes: payload, fetching: false, errorMessage: "" };
-    case "HERO_ERRORS":
+    case "ERROR":
       return {
         ...state,
         fetching: false,

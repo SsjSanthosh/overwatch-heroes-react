@@ -4,10 +4,12 @@ import { getHero } from "../../../redux/heroActions";
 import { BACKEND_API_PATH } from "../../endpoints";
 import "./style.scss";
 
-function HeroSelect({ hero, getHero }) {
+function HeroSelect({ hero, getHero, selectedHero }) {
   function handleHeroSelect(e) {
     e.stopPropagation();
-    getHero(hero.id);
+    if (selectedHero && hero.id !== selectedHero.id) {
+      getHero(hero.id);
+    }
   }
   return (
     <div className="hero-select" onClick={handleHeroSelect}>
