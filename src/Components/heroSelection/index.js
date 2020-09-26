@@ -21,6 +21,7 @@ function HeroSelection({ heroes, getAllHeroes, errorMessage }) {
             <button
               className="hero-role-btn"
               onClick={() => getAllHeroes(role.queryParams)}
+              key={role.name}
             >
               <div className="hero-role-icon">
                 <img src={role.icon} alt={role.name} />
@@ -37,7 +38,7 @@ function HeroSelection({ heroes, getAllHeroes, errorMessage }) {
         <Else>
           <div className="hero-selection-roster">
             {heroes.map((hero) => (
-              <HeroSelect hero={hero} id={hero.id} />
+              <HeroSelect hero={hero} id={hero.id} key={hero.id} />
             ))}
           </div>
         </Else>

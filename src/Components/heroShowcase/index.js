@@ -11,9 +11,8 @@ import {
 } from "../constants";
 import EmptyShowcase from "./emptyShowcase";
 import "./style.scss";
-function HeroShowcase({ hero, errorMessage, loading }) {
+function HeroShowcase({ hero, loading }) {
   const { TabPane } = Tabs;
-  console.log(loading);
   return (
     <div className="hero-showcase-container">
       <If condition={!Object.keys(hero).length && !loading}>
@@ -28,7 +27,7 @@ function HeroShowcase({ hero, errorMessage, loading }) {
         <Else>
           <div>
             <div className="hero-detail-div">
-              <Tabs defaultActiveKey="1">
+              <Tabs>
                 <TabPane tab="Profile" key="1">
                   <If condition={loading}>
                     <EmptyShowcase />
@@ -66,7 +65,6 @@ function HeroShowcase({ hero, errorMessage, loading }) {
 const mapStateToProps = (state) => {
   return {
     hero: state.hero.hero,
-    errorMessage: state.hero.errorMessage,
     loading: state.hero.fetching,
   };
 };
