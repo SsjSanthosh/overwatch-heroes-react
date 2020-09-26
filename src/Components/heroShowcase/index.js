@@ -11,11 +11,12 @@ import {
 } from "../constants";
 import EmptyShowcase from "./emptyShowcase";
 import "./style.scss";
-function HeroShowcase({ hero, errorMessage }) {
+function HeroShowcase({ hero, errorMessage, loading }) {
   const { TabPane } = Tabs;
+  console.log(loading);
   return (
     <div className="hero-showcase-container">
-      <If condition={!Object.keys(hero).length}>
+      <If condition={!Object.keys(hero).length && !loading}>
         <Then>
           <div className="empty-showcase-div">
             <p className="empty-showcase-text">
@@ -29,7 +30,12 @@ function HeroShowcase({ hero, errorMessage }) {
             <div className="hero-detail-div">
               <Tabs defaultActiveKey="1">
                 <TabPane tab="Profile" key="1">
-                  {getRenderedHeroObjects(hero, PROFILE_FIELDS, "profile")}
+                  <If condition={loading}>
+                    <EmptyShowcase />
+                    <Else>
+                      {getRenderedHeroObjects(hero, PROFILE_FIELDS, "profile")}
+                    </Else>
+                  </If>
                 </TabPane>
                 <TabPane tab="Weapons" key="2">
                   {getRenderedHeroObjects(hero.weapon, WEAPON_FIELDS, "weapon")}
@@ -58,6 +64,10 @@ function HeroShowcase({ hero, errorMessage }) {
 }
 
 const mapStateToProps = (state) => {
-  return { hero: state.hero.hero, errorMessage: state.hero.errorMessage };
+  return {
+    hero: state.hero.hero,
+    errorMessage: state.hero.errorMessage,
+    loading: state.hero.fetching,
+  };
 };
 export default connect(mapStateToProps)(HeroShowcase);
