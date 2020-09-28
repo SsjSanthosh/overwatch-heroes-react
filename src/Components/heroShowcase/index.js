@@ -1,5 +1,5 @@
 import { Tabs } from "antd";
-import React, { useEffect } from "react";
+import React from "react";
 import { If, Else, Then } from "react-if";
 import { connect } from "react-redux";
 import { getRenderedHeroObjects } from "../utils";

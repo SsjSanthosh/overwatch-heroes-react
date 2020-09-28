@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-import logo from "./logo.svg";
+import React from "react";
 import "./App.scss";
 import HeroShowcase from "./Components/heroShowcase";
 import HeroSelection from "./Components/heroSelection";

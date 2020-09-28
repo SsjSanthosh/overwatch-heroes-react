@@ -1,4 +1,3 @@
-import { Button, Card } from "antd";
 import React, { useEffect } from "react";
 import { Else, If, Then } from "react-if";
 import { connect } from "react-redux";
