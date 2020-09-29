@@ -2,6 +2,7 @@ import { Carousel } from "antd";
 import React from "react";
 import { BACKEND_API_PATH } from "../Components/endpoints";
 const renderHeroObjects = (data, fields, type) => {
+  //TODO: Refactor this to be a bit cleaner, see if we can get away without this many conditionals.
   return (
     <div className={`hero-${type}`}>
       {Object.keys(data).map((prop) => {
@@ -9,16 +10,19 @@ const renderHeroObjects = (data, fields, type) => {
           return (
             <div className={`hero-${type}-name`}>
               <p>{data[prop]}</p>
-              <a
-                href={`https://overwatch.gamepedia.com/${data.name}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="external-link"
-              >
-                Wiki Link
-              </a>
-              <span className="external-links"></span>
             </div>
+          );
+        }
+        if (prop === "wiki_link") {
+          return (
+            <a
+              href={`https://overwatch.gamepedia.com/${data.name}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="external-link"
+            >
+              Wiki Link
+            </a>
           );
         }
         if (prop === "image") {
@@ -32,14 +36,10 @@ const renderHeroObjects = (data, fields, type) => {
         }
         if (fields[prop] && data[prop]) {
           return (
-            <>
-              <p className="hero-prop">
-                <span className={`hero-prop-${type}-label`}>
-                  {fields[prop]}
-                </span>
-                <span className={`hero-prop-${type}-value`}>{data[prop]}</span>
-              </p>
-            </>
+            <p className="hero-prop">
+              <span className={`hero-prop-${type}-label`}>{fields[prop]}</span>
+              <span className={`hero-prop-${type}-value`}>{data[prop]}</span>
+            </p>
           );
         }
       })}
