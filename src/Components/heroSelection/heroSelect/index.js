@@ -4,13 +4,10 @@ import { getHero } from "../../../redux/heroActions";
 import { BACKEND_API_PATH } from "../../endpoints";
 import "./style.scss";
 
-function HeroSelect({ hero, getHero, selectedHero }) {
+function HeroSelect({ hero, getHero }) {
   function handleHeroSelect(e) {
     e.stopPropagation();
-    if (selectedHero && hero.id !== selectedHero.id) {
-      getHero(hero.id);
-      document.body.scrollTop = document.documentElement.scrollTop = 0;
-    }
+    getHero(hero.id);
   }
   return (
     <div className="hero-select" onClick={handleHeroSelect}>
@@ -27,8 +24,4 @@ function HeroSelect({ hero, getHero, selectedHero }) {
   );
 }
 
-const mapStateToProps = (state) => {
-  return { selectedHero: state.hero.hero };
-};
-
-export default connect(mapStateToProps, { getHero })(HeroSelect);
+export default connect(null, { getHero })(HeroSelect);
