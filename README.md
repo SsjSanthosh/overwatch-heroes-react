@@ -1,68 +1,67 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overwatch heroes - A hero showcase
 
-## Available Scripts
+![Project thumbnail](https://raw.githubusercontent.com/SsjSanthosh/overwatch-heroes-react/master/screenshots/thumbnail.png)
 
-In the project directory, you can run:
+An application to showcase all the 32 heroes from the Overwatch game. This react draws in data from my own django API you can find here! [here](https://github.com/SsjSanthosh/overwatch-heroes)
 
-### `yarn start`
+## Table of Contents
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [Project Status](#project-status)
+- [Description](#description)
+- [Tech/Framework Used](#techframework-used)
+- [Demo/Screenshots](#demoscreenshots)
+- [Installation](#installation)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Project Status
 
-### `yarn test`
+I want to take this app forward and include more information about the game, perhaps even add competitive stats.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Description
 
-### `yarn build`
+A react app to help showcase the data from the backend API. Separate tabs for each hero's abilities
+, ultimates, weapons and profile. You can filter the heroes based on their role.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This is just the frontend of the app, please check out the backend API [here](https://github.com/SsjSanthosh/overwatch-heroes)
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+#### Note - The heroku app might take a while to spin up from sleep (free tier), should only happen once.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Tech/Framework Used
 
-### `yarn eject`
+- React
+- Redux
+- Sass
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Demo/Screenshots
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![All heroes](https://raw.githubusercontent.com/SsjSanthosh/overwatch-heroes-react/master/screenshots/no-filter.png)
+_No filter, all heroes_
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+![Filter tank](https://raw.githubusercontent.com/SsjSanthosh/overwatch-heroes-react/master/screenshots/filter-tank.png)
+_Filter tank_
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+![Filter support](https://raw.githubusercontent.com/SsjSanthosh/overwatch-heroes-react/master/screenshots/filter-support.png)
+_Filter support_
 
-## Learn More
+![Filter damage](https://raw.githubusercontent.com/SsjSanthosh/overwatch-heroes-react/master/screenshots/filter-damage.png)
+_Filter damage_
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![Showcase](https://raw.githubusercontent.com/SsjSanthosh/overwatch-heroes-react/master/screenshots/showcase.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Installation
 
-### Code Splitting
+Clone down this repository. You will need `node` and `npm` installed globally on your machine.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+Installation:
 
-### Analyzing the Bundle Size
+- `npm install`
+- Create a .env file and set the following environment variables
+  - `REACT_APP_BASE_API_PATH = https://overwatch-heroes-api.herokuapp.com/`
+  - Or clone the repo, and point to the localhost server.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+To Start Server:
 
-### Making a Progressive Web App
+`npm start`
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+To Visit App:
 
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+`localhost:3000/`
