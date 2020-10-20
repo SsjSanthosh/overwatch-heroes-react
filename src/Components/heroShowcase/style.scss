@@ -59,7 +59,8 @@
       font-size: 24px;
     }
     .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn,
-    .ant-tabs-tab .ant-tabs-tab-btn:hover {
+    .ant-tabs-tab .ant-tabs-tab-btn:hover,
+    .ant-tabs-tab:hover {
       color: orange;
     }
     .ant-tabs-ink-bar {

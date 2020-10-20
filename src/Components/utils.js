@@ -8,7 +8,7 @@ const renderHeroObjects = (data, fields, type) => {
       {Object.keys(data).map((prop) => {
         if (prop === "name") {
           return (
-            <div className={`hero-${type}-name`}>
+            <div className={`hero-${type}-name`} key={data[prop]}>
               <p>{data[prop]}</p>
             </div>
           );
@@ -16,10 +16,11 @@ const renderHeroObjects = (data, fields, type) => {
         if (prop === "wiki_link") {
           return (
             <a
-              href={`https://overwatch.gamepedia.com/${data.name}`}
+              href={data[prop]}
               target="_blank"
               rel="noopener noreferrer"
               className="external-link"
+              key={data[prop]}
             >
               Wiki Link
             </a>
@@ -27,16 +28,20 @@ const renderHeroObjects = (data, fields, type) => {
         }
         if (prop === "image") {
           return (
-            <div className={`hero-${type}-img`}>
+            <div className={`hero-${type}-img`} key={data[prop]}>
               <img src={`${BACKEND_API_PATH}${data[prop]}`} alt={data.name} />
             </div>
           );
         } else if (prop === "favourite_quote") {
-          return <p className="hero-quote">{data[prop]}</p>;
+          return (
+            <p className="hero-quote" key={data[prop]}>
+              {data[prop]}
+            </p>
+          );
         }
         if (fields[prop] && data[prop]) {
           return (
-            <p className="hero-prop">
+            <p className="hero-prop" key={data[prop]}>
               <span className={`hero-prop-${type}-label`}>{fields[prop]}</span>
               <span className={`hero-prop-${type}-value`}>{data[prop]}</span>
             </p>

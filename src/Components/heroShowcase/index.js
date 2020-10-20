@@ -1,5 +1,5 @@
 import { Tabs } from "antd";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { If, Else, Then } from "react-if";
 import { connect } from "react-redux";
 import { getRenderedHeroObjects } from "../utils";
@@ -13,6 +13,10 @@ import EmptyShowcase from "./emptyShowcase";
 import "./style.scss";
 function HeroShowcase({ hero, loading }) {
   const { TabPane } = Tabs;
+  const [activeTab, setActiveTab] = useState("1");
+  useEffect(() => {
+    setActiveTab("1");
+  }, [hero]);
   return (
     <div className="hero-showcase-container">
       <If condition={!Object.keys(hero).length && !loading}>
@@ -27,7 +31,7 @@ function HeroShowcase({ hero, loading }) {
         <Else>
           <div>
             <div className="hero-detail-div">
-              <Tabs>
+              <Tabs activeKey={activeTab} onChange={(key) => setActiveTab(key)}>
                 <TabPane tab="Profile" key="1">
                   <If condition={loading}>
                     <EmptyShowcase />
