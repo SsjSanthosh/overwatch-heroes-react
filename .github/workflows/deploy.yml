@@ -32,7 +32,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: CI=false npm install -g yarn
+      - run: npm install -g yarn
       - run: yarn install --frozen-lockfile
-      - run: yarn build
+      - run: CI='' yarn build
       - run: aws s3 sync ./build s3://ssj-testing-bucket
