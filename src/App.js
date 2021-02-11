@@ -8,7 +8,7 @@ function App() {
   return (
     <Provider store={store}>
       <div className="App">
-        Lorem ipsum is here
+        AWS black magic
         <HeroShowcase />
         <HeroSelection />
       </div>
