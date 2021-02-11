@@ -62,4 +62,5 @@ export const getRenderedHeroObjects = (data, fields, type) => {
   } else {
     return renderHeroObjects(data, fields, type);
   }
+  return false;
 };
