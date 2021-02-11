@@ -8,6 +8,7 @@ function App() {
   return (
     <Provider store={store}>
       <div className="App">
+        Lorem ipsum is here
         <HeroShowcase />
         <HeroSelection />
       </div>
